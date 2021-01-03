@@ -1,0 +1,31 @@
+.button__wrapper {
+	display: flex;
+}
+
+.button {
+	height: 4rem;
+	padding: 0 $l-size;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: $default-transition;
+	text-transform: uppercase;
+	letter-spacing: 0.5px;
+}
+
+.button--filled {
+	@extend .button;
+	background: $shiny-purp;
+	color: #fff;
+	border: none;
+	box-shadow: $depth-1;
+	&:hover {
+		box-shadow: $depth-2;
+	}
+}
+
+.button--outline {
+	@extend .button;
+	background: none;
+	border: 1px solid #fff;
+	color: #fff;
+}

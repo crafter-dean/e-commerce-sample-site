@@ -1,0 +1,50 @@
+header.header,
+.header__left-content,
+.header__right-content button {
+	display: flex;
+	align-items: center;
+}
+
+header.header {
+	background: $bg-black;
+	min-height: 7.2rem;
+	padding: 0 $m-size;
+	justify-content: space-between;
+	color: #fff;
+	box-shadow: $depth-1;
+	z-index: 10;
+	position: relative;
+}
+
+.header__nav {
+	ul {
+		list-style: none;
+		display: flex;
+		text-transform: uppercase;
+		li {
+			margin: 0 $s-size;
+			a {
+				opacity: 0.74;
+				text-decoration: none;
+				color: #fff;
+				transition: $default-transition;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}
+
+.header__right-content {
+	button {
+		background: none;
+		color: #fff;
+		outline: none;
+		border: none;
+		cursor: pointer;
+		svg {
+			margin-left: $s-size;
+		}
+	}
+}

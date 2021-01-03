@@ -1,0 +1,16 @@
+.about__wrapper {
+	padding: $l-size $l-size $xl-size;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	color: $bg-black;
+	grid-column-gap: $l-size;
+	img {
+		max-width: calc(50vw - (3.2rem * 2));
+		object-fit: cover;
+		max-height: 80vh;
+		justify-self: end;
+	}
+	p {
+		padding: 0 $m-size 0 0;
+	}
+}

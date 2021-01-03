@@ -1,0 +1,14 @@
+.page__wrapper {
+	margin: $l-size $m-size $xl-size;
+	height: 100%;
+}
+
+.page__wrapper--single-column {
+	@extend .page__wrapper;
+	display: flex;
+	justify-content: center;
+}
+
+.page__layout--single-column {
+	width: 80rem;
+}

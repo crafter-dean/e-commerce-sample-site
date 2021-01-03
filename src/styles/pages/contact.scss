@@ -1,0 +1,23 @@
+.contact {
+	display: flex;
+	justify-content: center;
+	color: $bg-black;
+	padding: $l-size 0 $xl-size;
+}
+
+.contact__content {
+	display: grid;
+	grid-template-columns: 36rem 36rem;
+	column-gap: 4.8rem;
+}
+
+.contact__info {
+	h3 {
+		text-transform: uppercase;
+		font-size: $m-size;
+		margin: 0;
+	}
+	p {
+		margin: $s-size 0 $l-size;
+	}
+}

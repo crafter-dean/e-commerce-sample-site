@@ -1,0 +1,67 @@
+.carousel__wrapper {
+	max-height: 600px;
+	margin-top: -24px;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	button {
+		&:hover {
+			background: rgba(0, 0, 0, 0.4);
+		}
+		background: rgba(0, 0, 0, 0.2);
+		transition: background-color 0.2s ease-in-out;
+		position: absolute;
+		color: white;
+		top: 50%;
+		margin-top: -24px;
+		padding: 16px;
+		z-index: 11;
+		border: none;
+		cursor: pointer;
+		@media (max-width: 599px) {
+			display: none;
+		}
+	}
+}
+.carousel__controls {
+	position: absolute;
+	bottom: $s-size;
+	color: #fff;
+	ul {
+		list-style: none;
+		display: flex;
+		li {
+			margin: 0 $l-size 0 0;
+			font-size: $l-size;
+		}
+		.carousel__control--active {
+			background: pink;
+		}
+	}
+}
+.carousel__button--right {
+	left: calc(100vw - 56px);
+	transform: scaleX(-1);
+	filter: FlipH;
+}
+
+// Slide Styles
+.slide-01 {
+	overflow: hidden;
+	max-height: 600px;
+	display: flex;
+	background-color: $bg-black;
+	color: #fff;
+	.slide-01__column--left {
+		width: 30vw;
+		display: flex;
+		align-items: center;
+	}
+	.slide-01__column--right {
+		width: 70vw;
+		max-height: 100%;
+	}
+	img {
+		object-fit: cover;
+	}
+}

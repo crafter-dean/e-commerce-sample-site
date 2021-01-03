@@ -1,0 +1,32 @@
+footer.footer {
+	background: $dark-purp-gray;
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	min-height: 6.4rem;
+	padding: 0 $m-size;
+}
+
+.footer__center-content {
+	flex-grow: 1;
+	text-align: center;
+}
+
+.footer__right-content {
+	svg {
+		margin: 2px 2px 2px 18px;
+		fill: #fff;
+		width: 36px;
+		transition: all 0.4s;
+		transition-timing-function: $pop-in-transition;
+		&:hover {
+			margin: 0 0 0 16px;
+			width: 40px;
+		}
+	}
+}

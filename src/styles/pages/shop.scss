@@ -1,0 +1,110 @@
+.shop {
+	padding: $l-size $l-size $xl-size;
+}
+
+.shop__header {
+	display: flex;
+	justify-content: space-between;
+	form {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		label {
+			font-size: 1.4rem;
+			font-weight: 700;
+			margin-bottom: $xs-size;
+		}
+		select {
+			height: 5rem;
+			width: 36rem;
+			background: $pale-purp-gray--o12;
+			border: 1px solid $pale-purp-gray;
+			border-radius: 4px;
+			// color: $blue-01;
+			padding: 0 $m-size;
+			// hide standard arrow
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			&:focus {
+				outline: $dark-purp-gray auto 1px;
+			}
+		}
+		select::-ms-expand {
+			display: none;
+		}
+		&:after {
+			content: '▼';
+			color: $pale-purp-gray;
+			right: $m-size;
+			font-size: $m-size;
+			font-weight: 700;
+			top: 2.8rem;
+			padding-top: $m-size;
+			position: absolute;
+			pointer-events: none;
+		}
+	}
+}
+
+.shop__products {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-column-gap: $l-size;
+	padding: $l-size 0 $xl-size;
+}
+
+.shop__product {
+	box-shadow: $depth-2;
+	transition: $default-transition;
+	&:hover {
+		box-shadow: $depth-3;
+	}
+	border-radius: 4px;
+	color: $bg-black;
+}
+
+.shop-product__image {
+	overflow: hidden;
+	height: 24vw;
+	img {
+		object-fit: cover;
+	}
+	border-bottom: 1px solid $dark-purp-gray;
+}
+
+.shop-product__info {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: $m-size $m-size $l-size;
+	button {
+		background: none;
+		border: none;
+		align-self: flex-end;
+		text-transform: uppercase;
+		font-size: 1.4rem;
+		// color: $blue-01;
+		cursor: pointer;
+	}
+	p {
+		opacity: 0.84;
+		margin: 0 0 $xs-size;
+	}
+	.shop-product__info--faded {
+		max-height: 3.6rem;
+		min-height: 3.6rem;
+		position: relative;
+		overflow: hidden;
+		&:after {
+			content: '';
+			text-align: right;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 30%;
+			height: 1.8rem;
+			background: linear-gradient(to right, #ffffff00, #fff 50%);
+		}
+	}
+}
