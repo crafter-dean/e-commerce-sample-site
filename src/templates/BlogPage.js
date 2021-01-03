@@ -43,16 +43,25 @@ const BlogPage = ({ data, pathContext }) => {
 						animate="end"
 					>
 						{posts.map((post) => {
-							const { title, tags, excerpt, date, slug } = post.node;
+							const { title, tags, excerpt, date, slug, acf } = post.node;
 							return (
 								<motion.div
 									className="blog__card"
 									variants={staggerInChildStates}
 								>
 									<Link to={`/post/${slug}`}>
-										<div className="blog__post-placeholder-image">
-											<ImagePlaceholderIcon fill="#261E2B" size={128} />
-										</div>
+										{!!acf.feature_image ? (
+											<div className="blog__feature-image">
+												<img
+													src={acf.feature_image.source_url}
+													alt={acf.feature_image.alt_text}
+												/>
+											</div>
+										) : (
+											<div className="blog__post-placeholder-image">
+												<ImagePlaceholderIcon fill="#261E2B" size={128} />
+											</div>
+										)}
 									</Link>
 									<div className="blog__card-content">
 										{!!tags && (
@@ -104,6 +113,12 @@ export const blogPageQuery = graphql`
 					slug
 					tags {
 						name
+					}
+					acf {
+						feature_image {
+							source_url
+							alt_text
+						}
 					}
 				}
 			}
