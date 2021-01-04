@@ -37,3 +37,11 @@
 		align-items: center;
 	}
 }
+.post__feature-image {
+	overflow: hidden;
+	max-height: 50vh;
+	img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
