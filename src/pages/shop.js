@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
+import WithArrow from '../components/WithArrow';
 
 const Shop = () => {
 	const [selectedCategory, setCategory] = useState('All');
@@ -99,7 +100,11 @@ const Shop = () => {
 											<h3>{name}</h3>
 											<p className="shop-product__info--faded">{description}</p>
 											<p>${price}</p>
-											<button>view product</button>
+											<button>
+												<WithArrow color="#000" size={14} animate>
+													view product
+												</WithArrow>
+											</button>
 										</div>
 										<div className=""></div>
 									</div>
@@ -122,7 +127,11 @@ const Shop = () => {
 											<h3>{name}</h3>
 											<p className="shop-product__info--faded">{description}</p>
 											<p>${price}</p>
-											<button>view product</button>
+											<button>
+												<WithArrow color="#000" size={14} animate>
+													view product
+												</WithArrow>
+											</button>
 										</div>
 										<div className=""></div>
 									</div>

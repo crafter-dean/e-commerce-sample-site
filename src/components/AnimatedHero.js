@@ -3,6 +3,8 @@ import Img from 'gatsby-image';
 import { StaticQuery, graphql } from 'gatsby';
 import { motion } from 'framer-motion';
 
+import WithArrow from './WithArrow';
+
 const AnimatedHero = () => {
 	return (
 		<StaticQuery
@@ -34,7 +36,9 @@ const AnimatedHero = () => {
 							transition={{ delay: 1, duration: 1 }}
 							className="button--outline"
 						>
-							See What's Inside
+							<WithArrow size={16} animate>
+								See What's Inside
+							</WithArrow>
 						</motion.button>
 					</div>
 					<motion.div

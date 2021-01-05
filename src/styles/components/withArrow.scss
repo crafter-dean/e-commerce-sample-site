@@ -1,0 +1,15 @@
+.with-arrow {
+	display: flex;
+	align-items: center;
+}
+.with-arrow__arrow {
+	margin-top: 1%;
+}
+.with-arrow__arrow--right {
+	@extend .with-arrow__arrow;
+	margin-left: $s-size;
+}
+.with-arrow__arrow--left {
+	@extend .with-arrow__arrow;
+	margin-right: $s-size;
+}

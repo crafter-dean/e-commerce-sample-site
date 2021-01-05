@@ -6,7 +6,7 @@
 .blog__posts {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
-	column-gap: $m-size;
+	column-gap: $l-size;
 	row-gap: $l-size;
 }
 .blog__card {
