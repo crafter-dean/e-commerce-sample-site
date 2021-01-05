@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
+import WithArrow from '../components/WithArrow';
 
 const ProductPage = ({ data }) => {
 	const {
@@ -38,7 +39,11 @@ const ProductPage = ({ data }) => {
 							Add to Cart
 						</button>
 					</div>
-					<Link to="/shop">Back to Shop</Link>
+					<Link to="/shop">
+						<WithArrow leftSide color="#000" size={14}>
+							Back to Shop
+						</WithArrow>
+					</Link>
 				</div>
 			</div>
 		</Layout>

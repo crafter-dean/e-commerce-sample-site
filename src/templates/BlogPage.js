@@ -17,7 +17,6 @@ const BlogPage = ({ data, pathContext }) => {
 	const { numPosts, limit, currentPage, numPages } = pathContext;
 	const handlePageChange = (updates) => {
 		const clickedPageNum = updates.currentPage;
-		console.log('you clicked page', clickedPageNum);
 		if (clickedPageNum !== currentPage) {
 			if (clickedPageNum === 1) {
 				navigate('/blog');

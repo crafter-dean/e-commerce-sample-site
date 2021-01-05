@@ -4,6 +4,7 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
+import WithArrow from '../components/WithArrow';
 
 const Shop = () => {
 	const [selectedCategory, setCategory] = useState('All');
@@ -35,6 +36,20 @@ const Shop = () => {
 		}
 	`);
 
+	const getCategories = () => {
+		const categories = [];
+		data.allWordpressAcfItems.edges.forEach(({ node }) => {
+			const { category } = node.acf;
+			if (!categories.includes(category)) {
+				categories.push(category);
+			}
+		});
+
+		return categories;
+	};
+	let categories = getCategories();
+	console.log('poooop', categories);
+
 	return (
 		<Layout>
 			<SEO title="Shop" />
@@ -52,8 +67,9 @@ const Shop = () => {
 							}}
 						>
 							<option value="All">All</option>
-							<option value="Apparel">Apparel</option>
-							<option value="Food">Food</option>
+							{categories.map((category) => (
+								<option value={category}>{category}</option>
+							))}
 						</select>
 					</form>
 				</div>
@@ -84,7 +100,11 @@ const Shop = () => {
 											<h3>{name}</h3>
 											<p className="shop-product__info--faded">{description}</p>
 											<p>${price}</p>
-											<button>view product</button>
+											<button>
+												<WithArrow color="#000" size={14} animate>
+													view product
+												</WithArrow>
+											</button>
 										</div>
 										<div className=""></div>
 									</div>
@@ -107,7 +127,11 @@ const Shop = () => {
 											<h3>{name}</h3>
 											<p className="shop-product__info--faded">{description}</p>
 											<p>${price}</p>
-											<button>view product</button>
+											<button>
+												<WithArrow color="#000" size={14} animate>
+													view product
+												</WithArrow>
+											</button>
 										</div>
 										<div className=""></div>
 									</div>
