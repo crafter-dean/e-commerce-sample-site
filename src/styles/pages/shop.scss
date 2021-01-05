@@ -51,6 +51,7 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-column-gap: $l-size;
+	grid-row-gap: $l-size;
 	padding: $l-size 0 $xl-size;
 }
 
@@ -66,8 +67,10 @@
 
 .shop-product__image {
 	overflow: hidden;
-	height: 24vw;
+	height: 22vw;
+	background: $pale-purp-gray--o12;
 	img {
+		max-width: 100%;
 		object-fit: cover;
 	}
 	border-bottom: 1px solid $dark-purp-gray;
@@ -92,10 +95,11 @@
 		margin: 0 0 $xs-size;
 	}
 	.shop-product__info--faded {
-		max-height: 3.6rem;
-		min-height: 3.6rem;
+		max-height: 4.4rem;
+		min-height: 4.6rem;
 		position: relative;
 		overflow: hidden;
+		line-height: $leading-normal;
 		&:after {
 			content: '';
 			text-align: right;

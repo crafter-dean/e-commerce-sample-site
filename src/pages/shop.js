@@ -35,6 +35,20 @@ const Shop = () => {
 		}
 	`);
 
+	const getCategories = () => {
+		const categories = [];
+		data.allWordpressAcfItems.edges.forEach(({ node }) => {
+			const { category } = node.acf;
+			if (!categories.includes(category)) {
+				categories.push(category);
+			}
+		});
+
+		return categories;
+	};
+	let categories = getCategories();
+	console.log('poooop', categories);
+
 	return (
 		<Layout>
 			<SEO title="Shop" />
@@ -52,8 +66,9 @@ const Shop = () => {
 							}}
 						>
 							<option value="All">All</option>
-							<option value="Apparel">Apparel</option>
-							<option value="Food">Food</option>
+							{categories.map((category) => (
+								<option value={category}>{category}</option>
+							))}
 						</select>
 					</form>
 				</div>
