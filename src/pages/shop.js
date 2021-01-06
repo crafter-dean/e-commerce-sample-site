@@ -48,7 +48,6 @@ const Shop = () => {
 		return categories;
 	};
 	let categories = getCategories();
-	console.log('poooop', categories);
 
 	return (
 		<Layout>
