@@ -72,7 +72,7 @@ const FeaturedItems = () => {
 								</Link>
 							</div>
 							<motion.div
-								className="featured-items__image"
+								className="featured-items__img"
 								variants={imgAniStates}
 							>
 								<Link to={`product/${slug}`}>
