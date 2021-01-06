@@ -1,4 +1,5 @@
 // Colors
+// https://colorhunt.co/palette/220437
 $bg-black: #000;
 $blue-01: #2699fb;
 $blue-01-o84: #2699fbd6;
@@ -7,7 +8,10 @@ $dark-purp-gray: #19171a;
 $pale-purp-gray: #4c3a56;
 $pale-purp-gray--o12: #4c3a561f;
 $shiny-purp: #a90dff;
+$shiny-purp--lighter: #cf78ff;
 $shiny-purp--o74: #a90dffbd;
+$shiny-pink: #ff0090;
+$shiny-pink--lighter: #ff70c1;
 
 // Spacing
 $xs-size: 1rem;
@@ -38,3 +42,10 @@ $depth-2: 0 3px 6px rgba(29, 29, 37, 0.16), 0 3px 6px rgba(29, 29, 37, 0.23);
 $depth-3: 0 10px 20px rgba(29, 29, 37, 0.19), 0 6px 6px rgba(29, 29, 37, 0.23);
 $depth-4: 0 14px 28px rgba(29, 29, 37, 0.25), 0 10px 10px rgba(29, 29, 37, 0.22);
 $depth-5: 0 19px 38px rgba(29, 29, 37, 0.3), 0 15px 12px rgba(29, 29, 37, 0.22);
+
+// Z-Index
+$z-top: 50;
+$z-1: 3;
+$z-2: 2;
+$z-3: 1;
+$z-bottom: -50;

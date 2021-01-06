@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 import WithArrow from './WithArrow';
 
-const AnimatedHero = () => {
+const AnimatedHero = ({ onButtonClick }) => {
 	return (
 		<StaticQuery
 			query={graphql`
@@ -35,6 +35,7 @@ const AnimatedHero = () => {
 							animate={{ opacity: 1, y: 0 }}
 							transition={{ delay: 1, duration: 1 }}
 							className="button--outline"
+							onClick={onButtonClick}
 						>
 							<WithArrow size={16} animate>
 								See What's Inside
