@@ -20,33 +20,37 @@ const Header = () => {
 			document.body.style.position = 'relative';
 		};
 	}, []);
+	const getNavItems = () => (
+		<ul>
+			<li>
+				<Link to="/shop">Shop</Link>
+			</li>
+			<li>
+				<Link to="/blog">Blog</Link>
+			</li>
+			<li>
+				<Link to="/about">About</Link>
+			</li>
+			<li>
+				<Link to="/contact">Contact</Link>
+			</li>
+		</ul>
+	);
 	return (
 		<header className="header">
 			<div className="header__left-content">
 				<Link to="/">
 					<LogoIcon size={56} />
 				</Link>
-				<motion.nav
-					className={navIsOpen ? 'header__nav' : 'header__nav--closed'}
+				<nav className="header__nav">{getNavItems()}</nav>
+				<motion.div
 					variants={navAniStates}
 					initial="closed"
 					animate={navIsOpen ? 'open' : 'closed'}
+					className="header__menu-wrapper"
 				>
-					<ul>
-						<li>
-							<Link to="/shop">Shop</Link>
-						</li>
-						<li>
-							<Link to="/blog">Blog</Link>
-						</li>
-						<li>
-							<Link to="/about">About</Link>
-						</li>
-						<li>
-							<Link to="/contact">Contact</Link>
-						</li>
-					</ul>
-				</motion.nav>
+					<nav className="header__menu">{getNavItems()}</nav>
+				</motion.div>
 			</div>
 			<div className="header__right-content">
 				<button className="header__cart-button">
