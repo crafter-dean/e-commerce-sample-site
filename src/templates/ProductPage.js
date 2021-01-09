@@ -14,16 +14,15 @@ const ProductPage = ({ data }) => {
 		cover_image,
 		slug,
 	} = data.wordpressAcfItems.acf;
-	console.log('da slug', slug);
 	return (
 		<Layout>
 			<SEO title={name} description={description} />
 			<div className="product">
-				<div>
-					<span className="product__header-info">
+				<div className="product__left">
+					<div className="product__header-info">
 						<h1>{name}</h1>
-						<p>${price}</p>
-					</span>
+						<div>${price}</div>
+					</div>
 					<Img fluid={cover_image.localFile.childImageSharp.fluid} />
 				</div>
 				<div className="product__right">

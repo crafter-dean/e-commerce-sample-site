@@ -195,3 +195,50 @@ ImagePlaceholderIcon.propTypes = {
 	fill: PropTypes.string,
 	size: PropTypes.number,
 };
+
+export const HamburgerIcon = ({ fill, size }) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={size}
+		height={size}
+		viewBox="0 0 512 512"
+		aria-labelledby="title"
+	>
+		<title id="title">Menu Icon</title>
+		<rect x="32" y="96" width="448" height="64" rx="14.11" fill={fill} />
+		<rect x="32" y="224" width="448" height="64" rx="14.11" fill={fill} />
+		<rect x="32" y="352" width="448" height="64" rx="14.11" fill={fill} />
+	</svg>
+);
+HamburgerIcon.defaultProps = {
+	fill: '#fff',
+	size: 32,
+};
+HamburgerIcon.propTypes = {
+	fill: PropTypes.string,
+	size: PropTypes.number,
+};
+
+export const CloseIcon = ({ fill, size }) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={size}
+		height={size}
+		viewBox="0 0 512 512"
+		aria-labelledby="title"
+	>
+		<title id="title">Close Icon</title>
+		<path
+			d="M301.25 256L427 130.21a14.11 14.11 0 000-20L401.74 85a14.11 14.11 0 00-19.95 0L256 210.75 130.21 85a14.11 14.11 0 00-20 0L85 110.26a14.11 14.11 0 000 20L210.75 256 85 381.79a14.11 14.11 0 000 19.95l25.3 25.3a14.11 14.11 0 0020 0L256 301.25 381.79 427a14.11 14.11 0 0019.95 0l25.3-25.3a14.11 14.11 0 000-19.95z"
+			fill={fill}
+		/>
+	</svg>
+);
+CloseIcon.defaultProps = {
+	fill: '#fff',
+	size: 32,
+};
+CloseIcon.propTypes = {
+	fill: PropTypes.string,
+	size: PropTypes.number,
+};

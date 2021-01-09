@@ -1,16 +1,13 @@
 import React from 'react';
 
-import {
-	LogoIcon,
-	InstagramIcon,
-	TwitterIcon,
-	FacebookIcon,
-} from '../utils/icons';
+import { LogoIcon } from '../utils/icons';
 
 const Footer = () => {
 	return (
 		<footer className="footer">
-			<LogoIcon size={48} />
+			<div className="footer__logo">
+				<LogoIcon size={48} />
+			</div>
 			<div className="footer__center-content">
 				© Dean Nellis {new Date().getFullYear()}
 			</div>
@@ -33,9 +30,6 @@ const Footer = () => {
 						<path d="M173.66 427.69C316.7 429 433.7 314.08 435 171v-17.1a202.14 202.14 0 0044.8-47.3 206.69 206.69 0 01-52.26 15 96.86 96.86 0 0039.81-49.79 228.61 228.61 0 01-57.25 22.4 88.89 88.89 0 00-67.2-29.91 93.5 93.5 0 00-92.09 92.1 48.4 48.4 0 002.49 19.9A257.29 257.29 0 0164.15 79.24a95.42 95.42 0 00-12.45 47.3 98.89 98.89 0 0039.81 77.15 83.83 83.83 0 01-42.3-12.45 91 91 0 0074.65 89.6 76.8 76.8 0 01-24.86 2.5 42.44 42.44 0 01-17.41-2.5 94.31 94.31 0 0087.1 64.71A188 188 0 0154.2 385.36a68.89 68.89 0 01-22.4-2.5 234.88 234.88 0 00141.86 44.8" />
 					</svg>
 				</a>
-				{/* <InstagramIcon />
-				<TwitterIcon />
-				<FacebookIcon /> */}
 			</div>
 		</footer>
 	);

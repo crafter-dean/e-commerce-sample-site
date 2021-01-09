@@ -30,23 +30,25 @@ const AnimatedHero = ({ onButtonClick }) => {
 							<h2>Welcome to the Craft Pixel</h2>
 							<h1>Sample Site</h1>
 						</motion.div>
-						<motion.button
-							initial={{ opacity: 0, y: 100 }}
-							animate={{ opacity: 1, y: 0 }}
-							transition={{ delay: 1, duration: 1 }}
-							className="button--outline"
-							onClick={onButtonClick}
-						>
-							<WithArrow size={16} animate>
-								See What's Inside
-							</WithArrow>
-						</motion.button>
+						<div className="button__wrapper">
+							<motion.button
+								initial={{ opacity: 0, y: 100 }}
+								animate={{ opacity: 1, y: 0 }}
+								transition={{ delay: 1, duration: 1 }}
+								className="button--outline"
+								onClick={onButtonClick}
+							>
+								<WithArrow size={16} animate>
+									See What's Inside
+								</WithArrow>
+							</motion.button>
+						</div>
 					</div>
 					<motion.div
 						initial={{ scale: 1.1, opacity: 0 }}
 						animate={{ scale: 1, opacity: 1 }}
 						transition={{ delay: 0.25, duration: 1 }}
-						className="animated-hero__image-wrapper"
+						className="animated-hero__img"
 					>
 						<Img fluid={data.heroImage.childImageSharp.fluid} />
 					</motion.div>

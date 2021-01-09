@@ -1,17 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'gatsby';
+import { motion } from 'framer-motion';
 
-import { LogoIcon, CartIcon } from '../utils/icons';
+import { LogoIcon, CartIcon, HamburgerIcon, CloseIcon } from '../utils/icons';
 
 const Header = () => {
 	const cartCount = 0;
+	const [navIsOpen, setNavIsOpen] = useState(false);
+	const navAniStates = {
+		closed: { opacity: 0 },
+		open: { opacity: 1 },
+	};
+	const iconAniStates = {
+		closed: { rotate: 0 },
+		open: { rotate: 180 },
+	};
+	useEffect(() => {
+		return function cleanup() {
+			document.body.style.position = 'relative';
+		};
+	}, []);
 	return (
 		<header className="header">
 			<div className="header__left-content">
 				<Link to="/">
 					<LogoIcon size={56} />
 				</Link>
-				<nav className="header__nav">
+				<motion.nav
+					className={navIsOpen ? 'header__nav' : 'header__nav--closed'}
+					variants={navAniStates}
+					initial="closed"
+					animate={navIsOpen ? 'open' : 'closed'}
+				>
 					<ul>
 						<li>
 							<Link to="/shop">Shop</Link>
@@ -26,12 +46,29 @@ const Header = () => {
 							<Link to="/contact">Contact</Link>
 						</li>
 					</ul>
-				</nav>
+				</motion.nav>
 			</div>
 			<div className="header__right-content">
-				<button>
-					{`Cart [${cartCount}]`} <CartIcon />
+				<button className="header__cart-button">
+					<span>{`Cart [${cartCount}]`}</span>
+					<CartIcon />
 				</button>
+				<motion.button
+					variants={iconAniStates}
+					animate={navIsOpen ? 'open' : 'closed'}
+					initial="closed"
+					className="header__menu-button"
+					onClick={() => {
+						setNavIsOpen(!navIsOpen);
+						if (!navIsOpen) {
+							document.body.style.position = 'fixed';
+						} else {
+							document.body.style.position = 'relative';
+						}
+					}}
+				>
+					{navIsOpen ? <CloseIcon /> : <HamburgerIcon />}
+				</motion.button>
 			</div>
 		</header>
 	);

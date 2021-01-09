@@ -13,7 +13,10 @@ html {
 body {
 	position: relative;
 	margin: 0;
-	padding-bottom: 6.4rem; /* Height of Footer */
+	padding-bottom: 16rem; /* Height of Footer */
+	@include for-tablet-landscape-up {
+		padding-bottom: 6.4rem; /* Height of Footer */
+	}
 	min-height: 100%;
 	min-width: 100vw;
 	font-size: $m-size;

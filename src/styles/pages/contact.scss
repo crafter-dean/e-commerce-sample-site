@@ -7,7 +7,11 @@
 
 .contact__content {
 	display: grid;
-	grid-template-columns: 36rem 36rem;
+	grid-template-columns: 1fr;
+	padding: 0 $m-size 0;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 36rem 36rem;
+	}
 	column-gap: 4.8rem;
 }
 

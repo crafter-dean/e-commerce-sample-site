@@ -10,14 +10,23 @@ footer.footer {
 	justify-content: space-between;
 	min-height: 6.4rem;
 	padding: 0 $m-size;
+	flex-direction: column;
+	@include for-tablet-landscape-up {
+		flex-direction: row;
+	}
 }
 
 .footer__center-content {
 	flex-grow: 1;
 	text-align: center;
+	margin: $l-size 0;
 }
 
 .footer__right-content {
+	margin: 0 0 $l-size;
+	@include for-tablet-landscape-up {
+		margin: 0;
+	}
 	svg {
 		margin: 2px 2px 2px 18px;
 		fill: #fff;
@@ -28,5 +37,12 @@ footer.footer {
 			margin: 0 0 0 16px;
 			width: 40px;
 		}
+	}
+}
+
+.footer__logo {
+	display: none;
+	@include for-tablet-landscape-up {
+		display: initial;
 	}
 }
