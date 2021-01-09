@@ -1,14 +1,19 @@
 .about__wrapper {
 	padding: $l-size $l-size $xl-size;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 1fr;
+	}
 	color: $bg-black;
 	grid-column-gap: $l-size;
 	img {
-		max-width: calc(50vw - (3.2rem * 2));
+		@include for-tablet-landscape-up {
+			max-width: calc(50vw - (3.2rem * 2));
+			justify-self: end;
+		}
 		object-fit: cover;
 		max-height: 80vh;
-		justify-self: end;
 	}
 	p {
 		padding: 0 $m-size 0 0;

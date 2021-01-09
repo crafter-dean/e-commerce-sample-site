@@ -4,6 +4,10 @@
 
 .shop__header {
 	display: flex;
+	flex-direction: column;
+	@include for-tablet-portrait-up {
+		flex-direction: row;
+	}
 	justify-content: space-between;
 	form {
 		display: flex;
@@ -16,7 +20,10 @@
 		}
 		select {
 			height: 5rem;
-			width: 36rem;
+			width: 100%;
+			@include for-tablet-portrait-up {
+				width: 36rem;
+			}
 			background: $pale-purp-gray--o12;
 			border: 1px solid $pale-purp-gray;
 			border-radius: 4px;
@@ -49,7 +56,13 @@
 
 .shop__products {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr;
+	@include for-tablet-portrait-up {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
 	grid-column-gap: $l-size;
 	grid-row-gap: $l-size;
 	padding: $l-size 0 $xl-size;
@@ -67,7 +80,13 @@
 
 .shop-product__image {
 	overflow: hidden;
-	height: 22vw;
+	height: 78vw;
+	@include for-tablet-portrait-up {
+		height: 42vw;
+	}
+	@include for-tablet-landscape-up {
+		height: 21vw;
+	}
 	background: $pale-purp-gray--o12;
 	img {
 		max-width: 100%;
