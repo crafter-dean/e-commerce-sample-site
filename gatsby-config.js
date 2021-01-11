@@ -3,6 +3,7 @@ module.exports = {
 		title: `E-commerce Template Site`,
 		description: `An e-commerce template site with a Wordpress back-end`,
 		author: `Dean Nellis`,
+		siteUrl: `https://samplecms.craftpixelwpfarm.space/`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
