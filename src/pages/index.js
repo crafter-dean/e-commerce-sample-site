@@ -2,22 +2,19 @@ import React from 'react';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
-import AnimatedHero from '../components/AnimatedHero';
-import FeaturedItems from '../components/FeaturedItems';
-import LatestPost from '../components/LatestPost';
+import AnimatedLogo from '../components/AnimatedLogo';
 
-const IndexPage = ({ navigate }) => {
+const IndexPage = () => {
 	return (
-		<Layout>
-			<SEO title="Home" />
-			<AnimatedHero
-				onButtonClick={() => {
-					navigate('/shop');
-				}}
-			/>
-			<FeaturedItems />
-			<LatestPost />
-		</Layout>
+		<main>
+			<SEO title="Craft Pixel Landing Page" />
+			<div className="index__hero">
+				<section></section>
+				<section>
+					<AnimatedLogo />
+				</section>
+			</div>
+		</main>
 	);
 };
 
