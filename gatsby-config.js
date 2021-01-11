@@ -54,15 +54,7 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-sitemap`,
-		{
-			resolve: `gatsby-plugin-prefetch-google-fonts`,
-			options: {
-				fonts: [
-					{ family: `Mulish`, variants: [`400`, `700`, `900`] },
-					{ family: `Roboto` },
-				],
-			},
-		},
+		`gatsby-plugin-preload-fonts`,
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
