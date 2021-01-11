@@ -31,7 +31,7 @@ module.exports = {
 		{
 			resolve: 'gatsby-source-wordpress',
 			options: {
-				baseUrl: 'craftpixel.local',
+				baseUrl: 'samplecms.craftpixelwpfarm.space',
 				protocol: 'http',
 				hostingWPCOM: false,
 				// We will be using some advanced custom fields
