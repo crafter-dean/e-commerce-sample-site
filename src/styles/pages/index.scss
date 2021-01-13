@@ -2,3 +2,34 @@
 	display: grid;
 	grid-template-columns: 1fr 40vw;
 }
+
+.index__hero-cta {
+	padding: 0 $xl-size $l-size $xl-size;
+	align-self: center;
+	h1 {
+		font-size: 4.8rem;
+		font-weight: 800;
+	}
+	p {
+		font-size: 1.8rem;
+		font-family: $body-font;
+		line-height: $leading-loose;
+	}
+	button {
+		color: #fff;
+		background-image: linear-gradient(
+			to right,
+			#ff7c38 0%,
+			#e03e36 25%,
+			#b80d57 75%,
+			#700961 100%
+		);
+		border: 0;
+		&:hover {
+			box-shadow: $depth-2;
+			background-position: right center;
+		}
+		background-size: 200% auto;
+		transition: 0.5s;
+	}
+}
