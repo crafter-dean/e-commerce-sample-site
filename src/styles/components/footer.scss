@@ -11,8 +11,10 @@ footer.footer {
 	min-height: 6.4rem;
 	padding: 0 $m-size;
 	flex-direction: column;
+	min-height: 16rem;
 	@include for-tablet-landscape-up {
 		flex-direction: row;
+		min-height: 6.4rem;
 	}
 }
 

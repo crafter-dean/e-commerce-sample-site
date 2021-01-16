@@ -1,0 +1,19 @@
+.fast-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 1fr;
+		height: 48vh;
+	}
+	overflow: hidden;
+}
+.fast-section__copy {
+	padding: $l-size $xl-size $xl-size;
+	align-self: center;
+}
+.fast-section__animation {
+	place-self: center;
+	@include for-phone-only {
+		display: none;
+	}
+}

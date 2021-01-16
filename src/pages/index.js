@@ -1,23 +1,55 @@
 import React from 'react';
+import { Controller, Scene } from 'react-scrollmagic';
 
-import Layout from '../components/Layout';
+import LandingHeader from '../components/LandingHeader';
 import SEO from '../components/Seo';
-import AnimatedHero from '../components/AnimatedHero';
-import FeaturedItems from '../components/FeaturedItems';
-import LatestPost from '../components/LatestPost';
+import AnimatedLogo from '../components/AnimatedLogo';
+import WithArrow from '../components/WithArrow';
+import SampleSiteCta from '../components/SampleSiteCta';
+import FastSection from '../components/FastSection';
+import SeoSection from '../components/SeoSection';
+import Footer from '../components/Footer';
 
-const IndexPage = ({ navigate }) => {
+const IndexPage = () => {
 	return (
-		<Layout>
-			<SEO title="Home" />
-			<AnimatedHero
-				onButtonClick={() => {
-					navigate('/shop');
-				}}
-			/>
-			<FeaturedItems />
-			<LatestPost />
-		</Layout>
+		<Controller>
+			<Scene duration={600} triggerElement="#scroll-trigger">
+				{(progress, event) => (
+					<>
+						<main>
+							<SEO title="Craft Pixel: Experts in Design and Development" />
+							<LandingHeader />
+							<section className="index__hero">
+								<div className="index__hero-cta">
+									<h1>
+										Let's craft your <br></br>website together
+									</h1>
+									<p>
+										{' '}
+										Your brand is bigger than a template or a theme. We have the
+										design and development expertise to help custom build your
+										next site, store, blog, or digital dreamscape.
+									</p>
+									<button className="button--large">
+										<WithArrow animate size={16}>
+											Let's Talk
+										</WithArrow>
+									</button>
+								</div>
+								<div className="index__hero-animation">
+									<AnimatedLogo />
+								</div>
+							</section>
+							<SampleSiteCta />
+							<div id="scroll-trigger"></div>
+							<FastSection scrollState={event.state} />
+							<SeoSection />
+						</main>
+						<Footer />
+					</>
+				)}
+			</Scene>
+		</Controller>
 	);
 };
 

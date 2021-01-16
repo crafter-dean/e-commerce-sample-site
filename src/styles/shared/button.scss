@@ -31,3 +31,9 @@
 	border: 1px solid #fff;
 	color: #fff;
 }
+
+.button--large {
+	@extend .button;
+	padding: 0 $xl-size;
+	height: 5.6rem;
+}

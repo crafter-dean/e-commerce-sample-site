@@ -1,0 +1,24 @@
+.seo-section {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 36%;
+	}
+	background: $bg-gray--o24;
+}
+.seo-section__copy {
+	padding: $l-size $l-size $xl-size;
+	@include for-tablet-landscape-up {
+		padding: $l-size $xl-size $xl-size;
+	}
+	align-self: center;
+}
+.seo-section__img {
+	padding: 0 0 0 $l-size;
+	@include for-tablet-landscape-up {
+		padding: 0 0 0 $xl-size;
+	}
+	img {
+		object-fit: cover;
+	}
+}

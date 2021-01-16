@@ -1,0 +1,34 @@
+.sample-site-cta {
+	display: grid;
+	grid-template-columns: 1fr;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 1fr;
+	}
+	background: $bg-gray--o24;
+}
+.sample-site-cta__image {
+	background-image: linear-gradient(
+		80deg,
+		#ffbc9a 0%,
+		#ff9f9a 25%,
+		#fb98c3 75%,
+		#f795e8 100%
+	);
+	padding: $xl-size;
+	img {
+		object-fit: cover;
+	}
+	.gatsby-image-wrapper {
+		box-shadow: $depth-3;
+		transition: $default-transition;
+		&:hover {
+			box-shadow: $depth-5;
+		}
+	}
+}
+.sample-site-cta__cta {
+	padding: $l-size $l-size $xl-size;
+	@include for-tablet-landscape-up {
+		padding: $l-size $xl-size $xl-size;
+	}
+}
