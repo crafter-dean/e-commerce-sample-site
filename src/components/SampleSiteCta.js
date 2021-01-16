@@ -22,11 +22,6 @@ const SampleSiteCta = () => {
 			`}
 			render={(data) => (
 				<section className="sample-site-cta">
-					<div className="sample-site-cta__image">
-						<Link to="/sample-home" className="index__section-link">
-							<Img fluid={data.sampleSiteImage.childImageSharp.fluid} />
-						</Link>
-					</div>
 					<div className="sample-site-cta__cta">
 						<h3 className="index__section-eyebrow">Sample Site</h3>
 						<h2 className="index__section-heading">See what we can do</h2>
@@ -39,6 +34,11 @@ const SampleSiteCta = () => {
 							<WithArrow color={'#000'} size={16}>
 								Go to the Sample Site
 							</WithArrow>
+						</Link>
+					</div>
+					<div className="sample-site-cta__image">
+						<Link to="/sample-home" className="index__section-link">
+							<Img fluid={data.sampleSiteImage.childImageSharp.fluid} />
 						</Link>
 					</div>
 				</section>

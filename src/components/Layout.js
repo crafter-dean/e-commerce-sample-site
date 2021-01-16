@@ -7,11 +7,11 @@ import '../styles/styles.scss';
 
 const Layout = ({ children }) => {
 	return (
-		<div className="toggle-handle">
+		<>
 			<Header />
 			<main>{children}</main>
 			<Footer withSocial />
-		</div>
+		</>
 	);
 };
 

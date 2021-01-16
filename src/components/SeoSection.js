@@ -20,9 +20,6 @@ const SeoSection = () => {
 			`}
 			render={(data) => (
 				<section className="seo-section">
-					<div className="seo-section__img">
-						<Img fluid={data.seoSecureImage.childImageSharp.fluid} />
-					</div>
 					<div className="seo-section__copy">
 						<h3 className="index__section-eyebrow">Searchable & Secure</h3>
 						<h2 className="index__section-heading">
@@ -39,6 +36,9 @@ const SeoSection = () => {
 							Building sites to static HTML means no malicious requests, DDOS
 							attacks, or accidental exposure.
 						</p>
+					</div>
+					<div className="seo-section__img">
+						<Img fluid={data.seoSecureImage.childImageSharp.fluid} />
 					</div>
 				</section>
 			)}

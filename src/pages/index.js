@@ -13,14 +13,14 @@ import Footer from '../components/Footer';
 const IndexPage = () => {
 	return (
 		<Controller>
-			<Scene duration={600} offset={1000}>
+			<Scene duration={600} triggerElement="#scroll-trigger">
 				{(progress, event) => (
-					<div className="scroll-handle">
+					<>
 						<main>
 							<SEO title="Craft Pixel: Experts in Design and Development" />
 							<LandingHeader />
-							<div className="index__hero">
-								<section className="index__hero-cta">
+							<section className="index__hero">
+								<div className="index__hero-cta">
 									<h1>
 										Let's craft your <br></br>website together
 									</h1>
@@ -35,17 +35,18 @@ const IndexPage = () => {
 											Let's Talk
 										</WithArrow>
 									</button>
-								</section>
-								<section>
+								</div>
+								<div className="index__hero-animation">
 									<AnimatedLogo />
-								</section>
-							</div>
+								</div>
+							</section>
 							<SampleSiteCta />
+							<div id="scroll-trigger"></div>
 							<FastSection scrollState={event.state} />
 							<SeoSection />
 						</main>
 						<Footer />
-					</div>
+					</>
 				)}
 			</Scene>
 		</Controller>

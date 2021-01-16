@@ -1,6 +1,9 @@
 .sample-site-cta {
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 1fr;
+	}
 	background: $bg-gray--o24;
 }
 .sample-site-cta__image {
@@ -25,4 +28,7 @@
 }
 .sample-site-cta__cta {
 	padding: $l-size $l-size $xl-size;
+	@include for-tablet-landscape-up {
+		padding: $l-size $xl-size $xl-size;
+	}
 }

@@ -1,11 +1,22 @@
 .index__hero {
 	display: grid;
-	grid-template-columns: 1fr 40vw;
-	margin-bottom: $l-size;
+	grid-template-columns: 1fr;
+	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 40vw;
+	}
+	margin-bottom: $xl-size;
 }
-
+.index__hero-animation {
+	display: none;
+	@include for-tablet-landscape-up {
+		display: initial;
+	}
+}
 .index__hero-cta {
-	padding: 0 $xl-size $l-size $xl-size;
+	padding: 0 $l-size $l-size $l-size;
+	@include for-tablet-landscape-up {
+		padding: 0 $xl-size $l-size $xl-size;
+	}
 	align-self: center;
 	h1 {
 		font-size: 4.8rem;
@@ -43,7 +54,9 @@ h3.index__section-eyebrow {
 
 p.index__section-text {
 	line-height: $leading-loose;
-	margin-right: $xl-size;
+	@include for-tablet-landscape-up {
+		margin-right: $xl-size;
+	}
 }
 a.index__section-link {
 	color: #000;

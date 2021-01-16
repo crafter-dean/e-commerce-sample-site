@@ -15,28 +15,13 @@ const FastSection = ({ scrollState }) => {
 	};
 	return (
 		<section className="fast-section">
-			<div className="fast-section__copy">
-				<h3 className="index__section-eyebrow">Built Fast</h3>
-				<h2 className="index__section-heading">Our sites are wicked fast</h2>
-				<p className="index__section-text">
-					We build our sites using{' '}
-					<a href="https://www.gatsbyjs.com/">Gatsby</a>, a framework built for
-					speed.
-					<ul>
-						<li>Build to static HTML pages</li>
-						<li>Prefetching Resources</li>
-						<li>Image Optimization</li>
-					</ul>
-				</p>
-				<Link to="/sample-home" className="index__section-link">
-					<WithArrow color={'#000'} size={16}>
-						Find out more
-					</WithArrow>
-				</Link>
-			</div>
 			<motion.div
 				className="fast-section__animation"
-				animate={scrollState === 'DURING' ? 'scrolled' : 'start'}
+				animate={
+					scrollState === 'DURING' || scrollState === 'AFTER'
+						? 'scrolled'
+						: 'start'
+				}
 				initial="start"
 				transition={{ type: 'spring', bounce: 0.65, ease: 'circIn' }}
 				variants={wrapperAniStates}
@@ -65,6 +50,25 @@ const FastSection = ({ scrollState }) => {
 					/>
 				</svg>
 			</motion.div>
+			<div className="fast-section__copy">
+				<h3 className="index__section-eyebrow">Built Fast</h3>
+				<h2 className="index__section-heading">Our sites are wicked fast</h2>
+				<p className="index__section-text">
+					We build our sites using{' '}
+					<a href="https://www.gatsbyjs.com/">Gatsby</a>, a framework built for
+					speed.
+					<ul>
+						<li>Build to static HTML pages</li>
+						<li>Prefetching Resources</li>
+						<li>Image Optimization</li>
+					</ul>
+				</p>
+				<Link to="/sample-home" className="index__section-link">
+					<WithArrow color={'#000'} size={16}>
+						Find out more
+					</WithArrow>
+				</Link>
+			</div>
 		</section>
 	);
 };
