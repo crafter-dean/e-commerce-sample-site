@@ -1,0 +1,12 @@
+.fast-section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 48vh;
+}
+.fast-section__copy {
+	padding: $l-size $xl-size $xl-size;
+	align-self: center;
+}
+.fast-section__animation {
+	place-self: center;
+}

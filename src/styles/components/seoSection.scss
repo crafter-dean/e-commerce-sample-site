@@ -1,0 +1,14 @@
+.seo-section {
+	display: grid;
+	grid-template-columns: 33% 1fr;
+	background: $bg-gray--o24;
+}
+.seo-section__copy {
+	padding: $l-size $xl-size $xl-size;
+}
+.seo-section__img {
+	padding: 0 0 0 $xl-size;
+	img {
+		object-fit: cover;
+	}
+}
