@@ -6,6 +6,7 @@ import LandingHeader from '../components/LandingHeader';
 import Footer from '../components/Footer';
 import WithArrow from '../components/WithArrow';
 import { EnvelopeIcon } from '../utils/icons';
+import SEO from '../components/Seo';
 
 const ThankYou = () => {
 	const [displayInitialIcon, setDisplayInitialIcon] = useState(true);
@@ -19,6 +20,8 @@ const ThankYou = () => {
 	return (
 		<>
 			<LandingHeader />
+
+			<SEO title="Thanks for the message" />
 			<main className="thank-you">
 				{displayInitialIcon ? (
 					<EnvelopeIcon size={svgSize} fill="#000" />

@@ -1,14 +1,27 @@
-import React from "react"
+import React from 'react';
+import { Link } from 'gatsby';
 
-import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import SEO from '../components/Seo';
+import LandingHeader from '../components/LandingHeader';
+import Footer from '../components/Footer';
+import WithArrow from '../components/WithArrow';
 
 const NotFoundPage = () => (
-  <Layout>
-    <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-  </Layout>
-)
+	<>
+		<LandingHeader />
 
-export default NotFoundPage
+		<SEO title="Thanks for the message" />
+		<main className="not-found">
+			<h1>404: Page Not Found</h1>
+			<p>Whoops! We couldn't find that page</p>
+			<Link to="/">
+				<WithArrow leftSide size={14} color="#000">
+					Go Home
+				</WithArrow>
+			</Link>
+		</main>
+		<Footer />
+	</>
+);
+
+export default NotFoundPage;
