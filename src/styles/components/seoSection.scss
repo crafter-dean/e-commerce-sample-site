@@ -16,7 +16,7 @@
 .seo-section__img {
 	padding: 0 0 0 $l-size;
 	@include for-tablet-landscape-up {
-		padding: 0 0 0 $xl-size;
+		padding: 0 $xl-size 0 0;
 	}
 	img {
 		object-fit: cover;

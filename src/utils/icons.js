@@ -252,3 +252,37 @@ CloseIcon.propTypes = {
 	fill: PropTypes.string,
 	size: PropTypes.number,
 };
+
+export const EnvelopeIcon = ({ size }) => (
+	<svg
+		xmlns="http://www.w3.org/2000/svg"
+		width={size}
+		height={size}
+		viewBox="0 0 512 512"
+		aria-labelledby="title"
+	>
+		<title id="title">Envelope Icon</title>
+		<path
+			fill="none"
+			stroke="#231f20"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="16"
+			d="M32 224h448v256H32z"
+		/>
+		<path
+			fill="none"
+			stroke="#231f20"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="16"
+			d="M32 224l224 128 224-128"
+		/>
+	</svg>
+);
+EnvelopeIcon.defaultProps = {
+	size: 32,
+};
+EnvelopeIcon.propTypes = {
+	size: PropTypes.number,
+};
