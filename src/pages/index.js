@@ -9,6 +9,7 @@ import SampleSiteCta from '../components/SampleSiteCta';
 import FastSection from '../components/FastSection';
 import SeoSection from '../components/SeoSection';
 import Footer from '../components/Footer';
+import ContactForm from '../components/ContactForm';
 
 const IndexPage = () => {
 	return (
@@ -44,6 +45,7 @@ const IndexPage = () => {
 							<div id="scroll-trigger"></div>
 							<FastSection scrollState={event.state} />
 							<SeoSection />
+							<ContactForm />
 						</main>
 						<Footer />
 					</>
