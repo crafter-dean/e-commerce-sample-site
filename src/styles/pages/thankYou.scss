@@ -1,0 +1,17 @@
+.thank-you {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 15.2rem);
+	flex-direction: column;
+	padding-bottom: $xl-size;
+	p {
+		margin-bottom: $l-size;
+		font-weight: 600;
+		opacity: 0.64;
+	}
+	a {
+		text-decoration: none;
+		color: #000;
+	}
+}
