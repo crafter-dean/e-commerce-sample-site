@@ -44,7 +44,7 @@ const LatestPost = () => {
 					<i>Here's what's new in the Craft Pixel blog</i>
 				</h2>
 				<h1>{title}</h1>
-				<Link to={`post/${slug}`}>
+				<Link to={`/post/${slug}`}>
 					<button className="button--outline">
 						<WithArrow animate color="#a90dff" size={14}>
 							Go to Post
