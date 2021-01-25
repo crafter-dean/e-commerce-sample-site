@@ -7,6 +7,7 @@ import Footer from '../components/Footer';
 import WithArrow from '../components/WithArrow';
 import { EnvelopeIcon } from '../utils/icons';
 import SEO from '../components/Seo';
+import '../styles/styles.scss';
 
 const ThankYou = () => {
 	const [displayInitialIcon, setDisplayInitialIcon] = useState(true);

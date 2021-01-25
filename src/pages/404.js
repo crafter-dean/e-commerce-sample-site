@@ -5,6 +5,7 @@ import SEO from '../components/Seo';
 import LandingHeader from '../components/LandingHeader';
 import Footer from '../components/Footer';
 import WithArrow from '../components/WithArrow';
+import '../styles/styles.scss';
 
 const NotFoundPage = () => (
 	<>
