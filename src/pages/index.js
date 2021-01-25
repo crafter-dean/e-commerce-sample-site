@@ -10,6 +10,7 @@ import FastSection from '../components/FastSection';
 import SeoSection from '../components/SeoSection';
 import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
+import '../styles/styles.scss';
 
 const IndexPage = () => {
 	return (
