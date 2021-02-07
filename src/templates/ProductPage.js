@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import WithArrow from '../components/WithArrow';
 
-const ProductPage = ({ data }) => {
+const ProductPage = ({ data, location }) => {
 	const {
 		name,
 		price,
@@ -14,6 +14,7 @@ const ProductPage = ({ data }) => {
 		cover_image,
 		slug,
 	} = data.wordpressAcfItems.acf;
+	console.log('halp!! ', location.pathname);
 	return (
 		<Layout>
 			<SEO title={name} description={description} />
@@ -29,10 +30,11 @@ const ProductPage = ({ data }) => {
 					<p>{description}</p>
 					<div>
 						<button
-							className="snipcart-add-item button--filled"
+							className="snipcart-add-item"
 							data-item-id={slug}
 							data-item-price={price}
-							data-item-url={`/${slug}`}
+							// data-item-url={location.pathname}
+							data-item-url={`https://www.craftpixel.co/product/${slug}`}
 							data-item-name={name}
 						>
 							Add to Cart

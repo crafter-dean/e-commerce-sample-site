@@ -1,7 +1,7 @@
 module.exports = {
 	siteMetadata: {
-		title: `E-commerce Template Site`,
-		description: `An e-commerce template site with a Wordpress back-end`,
+		title: `Craft Pixel`,
+		description: `crafting custom websites with love ♡`,
 		author: `Dean Nellis`,
 		siteUrl: `https://samplecms.craftpixelwpfarm.space/`,
 	},
@@ -56,6 +56,13 @@ module.exports = {
 		},
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-preload-fonts`,
+		{
+			resolve: `gatsby-plugin-snipcart`,
+			options: {
+				apiKey: `${process.env.SNIPCART_KEY}`,
+				autopop: true,
+			},
+		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
