@@ -75,7 +75,7 @@ const FeaturedItems = () => {
 								className="featured-items__img"
 								variants={imgAniStates}
 							>
-								<Link to={`product/${slug}`}>
+								<Link to={`/product/${slug}`}>
 									<Img
 										fluid={cover_image.localFile.childImageSharp.fluid}
 										height="100%"
