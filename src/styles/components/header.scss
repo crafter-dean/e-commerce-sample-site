@@ -99,6 +99,9 @@ header.header {
 		display: flex;
 		align-items: center;
 	}
+	span {
+		margin-left: $s-size;
+	}
 }
 .header__menu-button {
 	display: initial;

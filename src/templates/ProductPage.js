@@ -35,6 +35,8 @@ const ProductPage = ({ data, location }) => {
 							data-item-url={location.pathname}
 							// data-item-url={`https://www.craftpixel.co/product/${slug}`}
 							data-item-name={name}
+							data-item-description={description}
+							// data-item-image={}
 						>
 							Add to Cart
 						</button>
