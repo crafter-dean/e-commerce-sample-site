@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 
@@ -14,7 +14,6 @@ const ProductPage = ({ data, location }) => {
 		cover_image,
 		slug,
 	} = data.wordpressAcfItems.acf;
-	console.log('halp!! ', location.pathname);
 	return (
 		<Layout>
 			<SEO title={name} description={description} />
@@ -30,11 +29,11 @@ const ProductPage = ({ data, location }) => {
 					<p>{description}</p>
 					<div>
 						<button
-							className="snipcart-add-item"
+							className="snipcart-add-item button--filled"
 							data-item-id={slug}
 							data-item-price={price}
-							// data-item-url={location.pathname}
-							data-item-url={`https://www.craftpixel.co/product/${slug}`}
+							data-item-url={location.pathname}
+							// data-item-url={`https://www.craftpixel.co/product/${slug}`}
 							data-item-name={name}
 						>
 							Add to Cart

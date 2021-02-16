@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'gatsby';
 import { motion } from 'framer-motion';
+import { SnipcartContext } from 'gatsby-plugin-snipcart-advanced/context';
 
 import { LogoIcon, CartIcon, HamburgerIcon, CloseIcon } from '../utils/icons';
 
 const Header = () => {
-	const cartCount = 0;
 	const [navIsOpen, setNavIsOpen] = useState(false);
 	const navAniStates = {
 		closed: { opacity: 0 },
@@ -36,6 +36,8 @@ const Header = () => {
 			</li>
 		</ul>
 	);
+	const { state } = useContext(SnipcartContext);
+	const { cartQuantity } = state;
 	return (
 		<header className="header">
 			<div className="header__left-content">
@@ -53,8 +55,8 @@ const Header = () => {
 				</motion.div>
 			</div>
 			<div className="header__right-content">
-				<button className="header__cart-button">
-					<span>{`Cart [${cartCount}]`}</span>
+				<button className="snipcart-checkout header__cart-button">
+					<span>{`Cart [${cartQuantity}]`}</span>
 					<CartIcon />
 				</button>
 				<motion.button
