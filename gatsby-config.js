@@ -57,9 +57,9 @@ module.exports = {
 		`gatsby-plugin-sitemap`,
 		`gatsby-plugin-preload-fonts`,
 		{
-			resolve: `gatsby-plugin-snipcart`,
+			resolve: `gatsby-plugin-snipcart-advanced`,
 			options: {
-				apiKey: `${process.env.SNIPCART_KEY}`,
+				publicApiKey: `${process.env.GATSBY_SNIPCART_API_KEY}`,
 				autopop: true,
 			},
 		},

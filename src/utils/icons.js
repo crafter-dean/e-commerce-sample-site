@@ -286,3 +286,54 @@ EnvelopeIcon.defaultProps = {
 EnvelopeIcon.propTypes = {
 	size: PropTypes.number,
 };
+
+export const ShoppingBagIcon = ({ fill, size }) => (
+	// <svg
+	// 	xmlns="http://www.w3.org/2000/svg"
+	// 	width={size}
+	// 	height={size}
+	// 	viewBox="0 0 512 512"
+	// aria-labelledby="title"
+	// >
+	// <title id="title">ShoppingBag Icon</title>
+	// 	<path
+	// 		fill="none"
+	// 		stroke="#231f20"
+	// 		stroke-linecap="round"
+	// 		stroke-linejoin="round"
+	// 		stroke-width="16"
+	// 		d="M32 224h448v256H32z"
+	// 	/>
+	// 	<path
+	// 		fill="none"
+	// 		stroke="#231f20"
+	// 		stroke-linecap="round"
+	// 		stroke-linejoin="round"
+	// 		stroke-width="16"
+	// 		d="M32 224l224 128 224-128"
+	// 	/>
+	// </svg>
+	<svg
+		viewBox="0 0 64 64"
+		xmlns="http://www.w3.org/2000/svg"
+		aria-labelledby="title"
+		width={size}
+		height={size}
+	>
+		<title id="title">ShoppingBag Icon</title>
+		<path
+			fill-rule="evenodd"
+			clip-rule="evenodd"
+			d="M51.714 20.47L55 60H9l3.286-39.53h9.857v-6.588C22.143 8.424 26.556 4 32 4c5.444 0 9.857 4.424 9.857 9.882v6.589h9.857zM25.43 13.883v16.47h-3.286v-6.587h-6.834l-2.737 32.94h38.856l-2.737-32.94h-6.834v6.588h-3.286v-16.47c0-3.634-2.947-6.589-6.571-6.589-3.624 0-6.571 2.955-6.571 6.588zm3.285 9.883V20.47h6.572v3.294h-6.572z"
+			fill={fill}
+		></path>
+	</svg>
+);
+ShoppingBagIcon.defaultProps = {
+	size: 32,
+	fill: '#fff',
+};
+ShoppingBagIcon.propTypes = {
+	size: PropTypes.number,
+	fill: PropTypes.string,
+};

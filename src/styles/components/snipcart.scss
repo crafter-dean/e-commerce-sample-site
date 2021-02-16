@@ -1,0 +1,64 @@
+.snipcart-modal__container {
+	box-shadow: $depth-4;
+	background: #e9e7ea !important;
+}
+.snipcart-modal {
+	background: #e9e7ea !important;
+	font-family: $body-font !important;
+}
+.snipcart__font {
+	font-family: $display-font !important;
+}
+.snipcart__font--secondary {
+	font-family: $body-font !important;
+}
+.snipcart__font--std,
+.snipcart__font--tiny {
+	font-weight: 400 !important;
+}
+.snipcart-cart-header,
+.snipcart-cart__content,
+.snipcart-featured-payment-methods__title {
+	background: none !important;
+}
+
+svg.snipcart-modal__close-icon,
+svg.snipcart-cart-header__icon,
+svg.snipcart__icon--blue-dark {
+	path {
+		fill: $shiny-purp !important;
+	}
+}
+
+.snipcart-cart-button {
+	background-image: linear-gradient(
+		to right,
+		#ff7c38 0%,
+		#e03e36 25%,
+		#b80d57 75%,
+		#700961 100%
+	) !important;
+	&:hover {
+		box-shadow: $depth-2;
+		background-position: right center;
+	}
+	background-size: 200% auto !important;
+	transition: 0.5s;
+}
+.snipcart__box--badge-highlight {
+	background-image: linear-gradient(
+		to right,
+		#ff7c38 0%,
+		#e03e36 50%,
+		#b80d57 100%
+	) !important;
+}
+
+.snipcart-input:focus-within,
+.snipcart-payment-form {
+	border-color: $shiny-purp !important;
+}
+
+.snipcart__actions--link {
+	color: $shiny-purp !important;
+}
