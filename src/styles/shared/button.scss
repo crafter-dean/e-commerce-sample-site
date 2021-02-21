@@ -30,6 +30,9 @@
 	background: none;
 	border: 1px solid #fff;
 	color: #fff;
+	&:hover {
+		box-shadow: $depth-2;
+	}
 }
 
 .button--large {

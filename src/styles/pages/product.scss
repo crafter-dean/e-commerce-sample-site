@@ -27,6 +27,9 @@
 		margin: 0;
 		padding: $s-size $s-size $m-size;
 	}
+	h1 {
+		width: calc(100% - (#{$l-size} * 2));
+	}
 	div {
 		display: inline-block;
 	}

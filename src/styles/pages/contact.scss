@@ -25,3 +25,12 @@
 		margin: $s-size 0 $l-size;
 	}
 }
+
+.contact__form {
+	form {
+		input,
+		textarea {
+			border: 1px solid #000;
+		}
+	}
+}
