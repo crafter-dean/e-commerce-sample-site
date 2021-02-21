@@ -10,6 +10,7 @@ const ContactForm = () => {
 				data-netlify="true"
 				action="/thank-you"
 				className="form"
+				id="contact"
 			>
 				<input type="hidden" name="form-name" value="Contact Form" />
 				<div className="form__inline-inputs">

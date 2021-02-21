@@ -33,4 +33,12 @@
 			border: 1px solid #000;
 		}
 	}
+	button {
+		border-color: #000;
+		color: #000;
+	}
+	p {
+		line-height: $leading-normal;
+		margin-top: $l-size;
+	}
 }

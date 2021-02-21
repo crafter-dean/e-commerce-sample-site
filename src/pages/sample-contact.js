@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
@@ -31,6 +32,10 @@ const Contact = () => {
 							<div className="button__wrapper">
 								<button className="button--outline">Send</button>
 							</div>
+							<p>
+								This is just a sample contact page. If you would really like to
+								reach us, please use <Link to="/#contact">this form.</Link>
+							</p>
 						</form>
 					</div>
 					<div className="contact__info">

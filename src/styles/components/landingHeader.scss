@@ -24,10 +24,14 @@
 	}
 	nav {
 		display: flex;
-		a {
+		button {
+			font-family: $display-font;
+		}
+		a,
+		button {
 			text-decoration: none;
 			text-transform: uppercase;
-			font-weight: 600;
+			font-weight: 700;
 			color: #000;
 			transition: $default-transition;
 			letter-spacing: 1px;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Controller, Scene } from 'react-scrollmagic';
 
 import LandingHeader from '../components/LandingHeader';
@@ -12,7 +12,15 @@ import Footer from '../components/Footer';
 import ContactForm from '../components/ContactForm';
 import '../styles/styles.scss';
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
+	useEffect(() => {
+		if (location.hash !== '') {
+			const anchor = location.hash.substring(1);
+			if (anchor === 'contact') {
+				document.getElementById(anchor).scrollIntoView({ behavior: 'smooth' });
+			}
+		}
+	});
 	return (
 		<Controller>
 			<Scene duration={600} triggerElement="#scroll-trigger">
@@ -32,7 +40,14 @@ const IndexPage = () => {
 										design and development expertise to help custom build your
 										next site, store, blog, or digital dreamscape.
 									</p>
-									<button className="button--large">
+									<button
+										className="button--large"
+										onClick={() => {
+											document
+												.getElementById('contact')
+												.scrollIntoView({ behavior: 'smooth' });
+										}}
+									>
 										<WithArrow animate size={16}>
 											Let's Talk
 										</WithArrow>

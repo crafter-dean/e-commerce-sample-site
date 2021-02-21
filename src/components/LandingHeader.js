@@ -11,7 +11,17 @@ const LandingHeader = () => {
 			</div>
 			<nav>
 				<Link to="sample-home">Sample Site</Link>
-				<a href="">Contact</a>
+				{/* <a href="/#contact"></a> */}
+				<button
+					className="button--no-style"
+					onClick={() => {
+						document
+							.getElementById('contact')
+							.scrollIntoView({ behavior: 'smooth' });
+					}}
+				>
+					Contact
+				</button>
 			</nav>
 		</header>
 	);

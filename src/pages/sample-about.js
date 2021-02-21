@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
@@ -12,6 +13,12 @@ const About = () => {
 				<img src={AboutImage} alt="" />
 				<div>
 					<h1 className="page-header">About Us</h1>
+
+					<p>
+						Here is a sample about page. If you would like to know more about{' '}
+						<i>Craft Pixel</i>, checkout this{' '}
+						<Link to="/post/what-is-craft-pixel">blog post</Link>.
+					</p>
 					<p>
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
 						eiusmod tempor incididunt ut ero labore et dolore magna aliqua. Ut
