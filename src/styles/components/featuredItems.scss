@@ -28,6 +28,10 @@
 		max-height: 48rem;
 		object-fit: cover;
 		max-width: 100%;
+		@include for-big-desktop-up {
+			max-width: 80%;
+			margin-left: 10%;
+		}
 	}
 }
 .featured-items__text {

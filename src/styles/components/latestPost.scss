@@ -32,7 +32,8 @@
 	}
 	img {
 		object-fit: cover;
-		min-height: 48rem;
+		object-position: center;
+		max-height: 48rem;
 	}
 	display: none;
 	@include for-tablet-landscape-up {
