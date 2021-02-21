@@ -36,7 +36,7 @@ const ProductPage = ({ data, location }) => {
 							// data-item-url={`https://www.craftpixel.co/product/${slug}`}
 							data-item-name={name}
 							data-item-description={description}
-							// data-item-image={}
+							data-item-image={cover_image.source_url}
 						>
 							Add to Cart
 						</button>
@@ -70,6 +70,7 @@ export const query = graphql`
 							}
 						}
 					}
+					source_url
 				}
 			}
 		}

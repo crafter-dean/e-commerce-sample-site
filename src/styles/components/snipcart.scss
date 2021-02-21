@@ -45,6 +45,14 @@ svg.snipcart__icon--blue-dark {
 	background-size: 200% auto !important;
 	transition: 0.5s;
 }
+.snipcart-cart-button--secondary {
+	color: #fff !important;
+	svg {
+		path {
+			fill: #fff !important;
+		}
+	}
+}
 .snipcart__box--badge-highlight {
 	background-image: linear-gradient(
 		to right,
