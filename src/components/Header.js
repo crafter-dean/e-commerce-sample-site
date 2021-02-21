@@ -35,10 +35,10 @@ const Header = () => {
 				<Link to="/blog">Blog</Link>
 			</li>
 			<li>
-				<Link to="/about">About</Link>
+				<Link to="/sample-about">About</Link>
 			</li>
 			<li>
-				<Link to="/contact">Contact</Link>
+				<Link to="/sample-contact">Contact</Link>
 			</li>
 		</ul>
 	);
