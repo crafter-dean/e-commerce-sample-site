@@ -23,7 +23,7 @@ const Shop = () => {
 							cover_image {
 								localFile {
 									childImageSharp {
-										fluid(quality: 100, maxWidth: 800) {
+										fluid(quality: 100, maxWidth: 500) {
 											...GatsbyImageSharpFluid_withWebp
 										}
 									}

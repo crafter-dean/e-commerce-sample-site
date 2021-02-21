@@ -11,7 +11,7 @@ const SeoSection = () => {
 				query {
 					seoSecureImage: file(relativePath: { regex: "/seo-secure/" }) {
 						childImageSharp {
-							fluid(maxWidth: 1000) {
+							fluid(maxWidth: 800) {
 								...GatsbyImageSharpFluid
 							}
 						}

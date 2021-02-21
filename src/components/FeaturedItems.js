@@ -17,7 +17,7 @@ const FeaturedItems = () => {
 							cover_image {
 								localFile {
 									childImageSharp {
-										fluid(quality: 100, maxWidth: 800) {
+										fluid(quality: 100, maxWidth: 740) {
 											...GatsbyImageSharpFluid_withWebp
 										}
 									}
@@ -86,12 +86,6 @@ const FeaturedItems = () => {
 					);
 				}
 			})}
-			{/* <div className="featured-items__item">
-				<h2>Item 1</h2>
-			</div>
-			<div className="featured-items__item">
-				<h2>Item 2</h2>
-			</div> */}
 		</section>
 	);
 };

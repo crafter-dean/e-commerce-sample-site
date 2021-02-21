@@ -3,7 +3,7 @@ module.exports = {
 		title: `Craft Pixel`,
 		description: `crafting custom websites with love ♡`,
 		author: `Dean Nellis`,
-		siteUrl: `https://samplecms.craftpixelwpfarm.space/`,
+		siteUrl: `https://www.craftpixel.co/`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,
