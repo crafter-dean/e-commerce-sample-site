@@ -75,7 +75,6 @@ class Pagination extends Component {
 		const currentPage = this.state.currentPage;
 		const totalNumbers = this.pageNeighbors * 2 + 3;
 		const totalBlocks = totalNumbers + 2;
-		console.log('halp 2 ', totalNumbers, totalBlocks);
 
 		if (totalPages > totalBlocks) {
 			const startPage = Math.max(2, currentPage - pageNeighbors);
@@ -111,7 +110,6 @@ class Pagination extends Component {
 		if (!this.totalRecords || this.totalPages === 1) return null;
 		const { currentPage } = this.state;
 		const pages = this.fetchPageNumbers();
-		console.log('halp', pages);
 		return (
 			<>
 				<nav>
