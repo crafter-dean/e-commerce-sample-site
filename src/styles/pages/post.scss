@@ -22,11 +22,15 @@
 		text-decoration: none;
 		h2 {
 			margin-left: $s-size;
-			// margin-bottom: 0.2rem;
+		}
+		p {
+			color: $shiny-purp;
 		}
 	}
 	a:nth-child(even) {
-		text-align: right;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
 		h2 {
 			margin-left: 0;
 			margin-right: $s-size;
@@ -45,5 +49,11 @@
 		max-height: 50vh;
 		object-fit: cover;
 		object-position: center;
+	}
+}
+.post__body {
+	img {
+		width: 100%;
+		object-fit: contain;
 	}
 }
