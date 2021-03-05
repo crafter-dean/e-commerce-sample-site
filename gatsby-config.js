@@ -63,6 +63,12 @@ module.exports = {
 				autopop: true,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-gtag`,
+			options: {
+				trackingId: process.env.ANALYTICS_ID,
+			},
+		},
 		// this (optional) plugin enables Progressive Web App + Offline functionality
 		// To learn more, visit: https://gatsby.dev/offline
 		// `gatsby-plugin-offline`,
