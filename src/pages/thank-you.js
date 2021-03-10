@@ -22,7 +22,10 @@ const ThankYou = () => {
 		<>
 			<LandingHeader />
 
-			<SEO title="Thanks for the message" />
+			<SEO
+				title="Thanks for the message"
+				description="Contact confirmation page"
+			/>
 			<main className="thank-you">
 				{displayInitialIcon ? (
 					<EnvelopeIcon size={svgSize} fill="#000" />

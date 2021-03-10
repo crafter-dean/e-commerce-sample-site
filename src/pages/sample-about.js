@@ -8,7 +8,7 @@ import AboutImage from '../images/aboutImage@2x.png';
 const About = () => {
 	return (
 		<Layout>
-			<SEO title="About" />
+			<SEO title="Sample About" description="Sample About Page" />
 			<div className="about__wrapper">
 				<img src={AboutImage} alt="" />
 				<div>

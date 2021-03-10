@@ -11,7 +11,7 @@ const NotFoundPage = () => (
 	<>
 		<LandingHeader />
 
-		<SEO title="Thanks for the message" />
+		<SEO title="Page Not Found" />
 		<main className="not-found">
 			<h1>404: Page Not Found</h1>
 			<p>Whoops! We couldn't find that page</p>

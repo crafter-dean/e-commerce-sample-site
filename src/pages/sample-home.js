@@ -9,7 +9,7 @@ import LatestPost from '../components/LatestPost';
 const SampleIndexPage = ({ navigate }) => {
 	return (
 		<Layout>
-			<SEO title="Home" />
+			<SEO title="Sample Site" description="Craft Pixel's sample website" />
 			<AnimatedHero
 				onButtonClick={() => {
 					navigate('/shop');

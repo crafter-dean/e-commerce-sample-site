@@ -27,7 +27,10 @@ const IndexPage = ({ location }) => {
 				{(progress, event) => (
 					<>
 						<main>
-							<SEO title="Craft Pixel: Experts in Website Design and Development" />
+							<SEO
+								title="Craft Pixel: Experts in Website Design and Development"
+								description="crafting custom websites with love ♡"
+							/>
 							<LandingHeader />
 							<section className="index__hero">
 								<div className="index__hero-cta">
