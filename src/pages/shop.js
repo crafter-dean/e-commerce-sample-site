@@ -51,7 +51,7 @@ const Shop = () => {
 
 	return (
 		<Layout>
-			<SEO title="Shop" />
+			<SEO title="Shop" description="Craft Pixel's shop" />
 			<div className="shop">
 				<div className="shop__header">
 					<h1>{selectedCategory}</h1>
