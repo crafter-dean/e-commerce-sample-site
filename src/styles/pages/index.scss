@@ -2,6 +2,9 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	@include for-tablet-landscape-up {
+		grid-template-columns: 1fr 1fr;
+	}
+	@include for-desktop-up {
 		grid-template-columns: 1fr 40vw;
 	}
 	margin-bottom: $xl-size;

@@ -2,4 +2,11 @@
 	padding: $m-size $xl-size $xl-size;
 	background: $bg-purp;
 	color: #fff;
+	h1 {
+		text-transform: uppercase;
+		letter-spacing: 1.8px;
+		opacity: 0.84;
+		font-size: 2rem;
+		margin-bottom: $l-size;
+	}
 }

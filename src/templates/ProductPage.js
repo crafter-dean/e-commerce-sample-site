@@ -33,7 +33,6 @@ const ProductPage = ({ data, location }) => {
 							data-item-id={slug}
 							data-item-price={price}
 							data-item-url={location.pathname}
-							// data-item-url={`https://www.craftpixel.co/product/${slug}`}
 							data-item-name={name}
 							data-item-description={description}
 							data-item-image={cover_image.source_url}
@@ -41,6 +40,7 @@ const ProductPage = ({ data, location }) => {
 							Add to Cart
 						</button>
 					</div>
+
 					<Link to="/shop">
 						<WithArrow leftSide color="#000" size={14}>
 							Back to Shop

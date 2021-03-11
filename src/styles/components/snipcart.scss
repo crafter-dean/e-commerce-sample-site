@@ -14,7 +14,7 @@
 }
 .snipcart__font--std,
 .snipcart__font--tiny {
-	font-weight: 400 !important;
+	// font-weight: 400 !important;
 }
 .snipcart-cart-header,
 .snipcart-cart__content,
@@ -63,7 +63,8 @@ svg.snipcart__icon--blue-dark {
 }
 
 .snipcart-input:focus-within,
-.snipcart-payment-form {
+.snipcart-payment-form,
+.snipcart-textbox--focus {
 	border-color: $shiny-purp !important;
 }
 
