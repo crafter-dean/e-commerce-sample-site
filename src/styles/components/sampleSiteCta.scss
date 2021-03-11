@@ -15,15 +15,17 @@
 		#f795e8 100%
 	);
 	padding: $xl-size;
-	img {
-		object-fit: cover;
-	}
+	display: flex;
+	align-items: center;
 	.gatsby-image-wrapper {
 		box-shadow: $depth-3;
 		transition: $default-transition;
 		&:hover {
 			box-shadow: $depth-5;
 		}
+	}
+	a {
+		width: 100%;
 	}
 }
 .sample-site-cta__cta {

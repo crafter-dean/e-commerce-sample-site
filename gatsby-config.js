@@ -13,6 +13,7 @@ module.exports = {
 		description: `crafting custom websites with love ♡`,
 		author: `Dean Nellis`,
 		siteUrl: `https://www.craftpixel.co/`,
+		image: `/images/craftPixel-icon.png`,
 	},
 	plugins: [
 		`gatsby-plugin-react-helmet`,

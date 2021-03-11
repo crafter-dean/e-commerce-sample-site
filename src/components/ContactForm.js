@@ -3,7 +3,7 @@ import React from 'react';
 const ContactForm = () => {
 	return (
 		<section className="contact-form">
-			<h1>Contact Us</h1>
+			<h1>Let's Talk</h1>
 			<form
 				name="Contact Form"
 				method="POST"
@@ -25,7 +25,7 @@ const ContactForm = () => {
 				</div>
 				<div className="input-group">
 					<textarea name="message" />
-					<label>Message</label>
+					<label>What can Craft Pixel do for you?</label>
 				</div>
 				<div className="button__wrapper">
 					<button className="button--outline" type="submit">

@@ -11,6 +11,15 @@
 	padding: $l-size $xl-size $xl-size;
 	align-self: center;
 }
+.fast-section__animation-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 27.2rem;
+	@include for-phone-only {
+		min-height: initial;
+	}
+}
 .fast-section__animation {
 	place-self: center;
 	@include for-phone-only {
