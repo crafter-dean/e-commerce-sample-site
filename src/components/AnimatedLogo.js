@@ -67,7 +67,7 @@ const AnimatedLogo = () => {
 						fill={fill}
 						d={d}
 						key={i}
-						onHoverStart={() => {
+						onHoverEnd={() => {
 							onHoverPixel(i);
 						}}
 						variants={pixelAniStates}
