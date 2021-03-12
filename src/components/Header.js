@@ -14,8 +14,8 @@ import {
 const Header = () => {
 	const [navIsOpen, setNavIsOpen] = useState(false);
 	const navAniStates = {
-		closed: { opacity: 0 },
-		open: { opacity: 1 },
+		closed: { opacity: 0, pointerEvents: 'none' },
+		open: { opacity: 1, pointerEvents: 'initial' },
 	};
 	const iconAniStates = {
 		closed: { rotate: 0 },
