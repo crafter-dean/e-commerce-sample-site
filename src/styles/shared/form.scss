@@ -3,7 +3,10 @@
 	display: flex;
 	.form__inline-inputs {
 		display: flex;
-		width: 64%;
+		width: 100%;
+		@include for-tablet-landscape-up {
+			width: 64%;
+		}
 		div {
 			&:first-child {
 				margin-right: $l-size;
